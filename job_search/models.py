@@ -54,3 +54,14 @@ class Application(models.Model):
 
     def __str__(self):
         return str(self.company_name)
+
+
+class Blog(models.Model):
+    title = models.CharField(max_length=50)
+    subtitle = models.CharField(max_length=50)
+    date = models.DateField
+    body = models.TextField()
+    slug = models.SlugField(max_length=300)
+
+    def __str__(self):
+        return str(self.title)
