@@ -45,7 +45,7 @@ class AppliedView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['applied'] = Application.objects.filter(status='Applied')
+        context["applied"] = Application.objects.filter(status="Applied")
         return context
 
 
@@ -55,7 +55,7 @@ class ActiveView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['active'] = Application.objects.filter(status='Active')
+        context["active"] = Application.objects.filter(status='Active')
         return context
 
 

@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
     Dead
-    {% for app in object_list %}
+    {% for app in dead %}
         {{app}}
     {% endfor %}
-</body>
-</html>
+{% endblock %}
