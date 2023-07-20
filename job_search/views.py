@@ -39,5 +39,32 @@ class BlogView(DetailView):
         return context
     
 
+class AppliedView(ListView):
+    model = Application
+    template_name = "applied.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+
+class ActiveView(ListView):
+    model = Application
+    template_name = "active.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+
+class DeadView(ListView):
+    model = Application
+    template_name = "dead.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+
 class CreateView(TemplateView):
     template_name = "add_view.html"

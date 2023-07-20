@@ -10,5 +10,8 @@ urlpatterns = [
     path('blog/', BlogsView.as_view()),
     path('blog/<slug:slug>/', BlogView.as_view()),
     path('app/<int:pk>/', AppView.as_view(), name='application'),
-    path('create/', CreateView.as_view(), name='create')
+    path('create/', CreateView.as_view(), name='create'),
+    path('applied/', AppliedView.as_view()),
+    path('active/', ActiveView.as_view()),
+    path('dead/', DeadView.as_view()),
 ]
