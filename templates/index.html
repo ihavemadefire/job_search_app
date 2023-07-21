@@ -1,4 +1,30 @@
 {% extends "base.html" %}
+{% block title %}Jacob's Job Search | Home{% endblock %}
 {% block content %}
-    This is the index page
+    <h1 class="index_header text-center">Jacob's Job Hunt</h1>
+    <h2 class="index_subheader text-center">"something will shake loose..."</h2>
+    <div class="container">
+        <a class="link_style" href="{% url 'job_search:blog' %}">
+            <div class="item count_box">
+                <h3 class="box_font_text">Applied</h3>
+                <div class="text-center box_font_numbers">{{applied_count}}</div>
+            </div>
+        </a>
+        <a class="link_style" href="{% url 'job_search:blog' %}">
+            <div class="item count_box">
+                <h3 class="box_font_text">Active</h3>
+                <div class="text-center box_font_numbers">{{active_count}}</div>
+            </div>
+        </a>
+        <a class="link_style" href="{% url 'job_search:blog' %}">
+            <div class="item count_box">
+                <h3 class="box_font_text">Dead</h3>
+                <div class="text-center box_font_numbers">{{dead_count}}</div>
+            </div>
+        </a>
+    </div>
+    <h5 class="body_text_sub">Follow me on my journey to my next software role</h5>
+    <p class="body_text">As of May 2023, I found myself looking for a new role. My most recent position was as a Data Engineer, but as you might have noticed from this nifty website, I have a background in web developement as well.</p>
+    <p class="body_text"> For a full discussion of my background, skill set, and work experience, check out the <a class='link_style_bold' href="{% url 'job_search:about' %}">About</a> page for all the details.</p>
+    <p class="body_text">Also, check out my <a class='link_style_bold' href="{% url 'job_search:blog' %}">Blog</a> as I chronical the challenges and insights of the horrible slog that is looking for a new gig. It might even be useful to others who find themselves stuck in this lame situation.</p>
 {% endblock %}
